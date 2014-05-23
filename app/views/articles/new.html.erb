@@ -1,0 +1,13 @@
+<h1>My Blog!</h1>
+<hr>
+<div id="links">
+<%= link_to 'Homepage', controller: 'articles' %>
+<%= link_to 'New Article', new_article_path %>
+</div>
+<hr>
+
+<h1>New Article</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Homepage', articles_path %>
