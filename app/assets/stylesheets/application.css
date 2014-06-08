@@ -1,50 +1,93 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-#links{
-	margin:0 auto;
-    width:150px;
-
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any styles
+* defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+* file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+ul{
+	margin:0 ;
+	padding:0;
+	width: 1000px;
+	list-style-type: none;
 }
-
+ 
 h1{
-	font-family:Georgia;
+	font-family: 'Atomic Age', cursive;
 	text-align: center;
+	font-size: 36px;
+	color:#00376f;
 }
-
+ 
 a{
 	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	color:#002a56;
 }
-
+ 
 hr{
 	border:none;
 }
-
+ 
 ul{
 	display:inline;
 	padding:0;
 }
+
 li{
 	list-style: none;
 	display:inline;
 }
+
 body{
 	margin-left:20%;
 	margin-right:20%;
 }
-
+ 
 h2{
-	
+	font-family: 'Ubuntu', sans-serif;
+	font-size:20px;
+}
+
+p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	color:#0050a2	;
+
+}
+
+#title{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 22px;
+	color:#001e3c;
+
+}
+#title1{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 22px;
+	text-align:right;
+	color:#001e3c;
+}
+
+#add{
+	font-family: 14px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+#date{
+	text-align:right;
+}
+
+#tags{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color:#000080 ;
 }

@@ -2,29 +2,36 @@
 <h1>nik.io</h1>
 <hr>
  
-<div id="links">
-<%= link_to 'Homepage', controller: 'articles' %>
-<%= link_to 'New Article', new_article_path %>
+<ul>
+
+<li><%= link_to 'Homepage', '/articles/index'  %></li>
+<li><%= link_to 'New Article', new_article_path %></li>
+
+<div id="tag_cloud">
+  <% tag_cloud Article.tag_counts, %w{s m l} do |tag, css_class| %>
+    <li><%= link_to tag.name, tag_path(tag.name), class: css_class %></li>
+  <% end %>
 </div>
+
+</ul>
 <hr>
  
  
 <table>
   <% @articles.each do |article| %>
   <td>
-    <tr> <%= article.title %></tr>
-    <hr>
-    <tr><%= article.text %></tr>
+    <tr> <p id="title1"> <%= article.title %></p></tr>
+    <tr> <p id="date"> <%= article.created_at.strftime("%B %d, %Y") %></p></tr>
+    <tr> <p> <%= article.text %> <p> </tr>
   </td>
   </table> 
-    <hr>
-  
+    <p id="tags">Tags: <%= raw article.tag_list.map{|t| link_to t, tag_path(t)}.join(', ') %></p>
     <ul>
-      <li> <strong>Controls: </strong></li>
       <li><%= link_to 'Show', article_path(article) %> </li>
       <li><%= link_to 'Edit', edit_article_path(article) %> </li>
       <li><%= link_to 'Delete', article_path(article),
                     method: :delete, data: { confirm: 'Are you sure?' } %> </li>
     </ul>
+    
     <hr style="height:10px">
   <% end %>

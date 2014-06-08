@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/mbleigh/acts-as-taggable-on.git
+  revision: 7370136dc1db93aaa6f9577da6f7a8b7361f91de
+  specs:
+    acts-as-taggable-on (3.2.6)
+      activerecord (>= 3, < 5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -116,6 +123,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  acts-as-taggable-on!
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails

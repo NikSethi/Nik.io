@@ -3,10 +3,14 @@ def new
 	@article = Article.new
 end
 
-http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+http_basic_authenticate_with name: "nik", password: "sethi", except: [:index, :show]
 
 def index
-	@articles = Article.all
+	if params[:tag]
+		@articles = Article.tagged_with(params[:tag])
+	else
+		@articles = Article.all
+	end
 end
 
 def create
@@ -44,9 +48,10 @@ def destroy
   redirect_to articles_path
 end
 
+
 private
 	def article_params
-		params.require(:article).permit(:title, :text)
+		params.require(:article).permit(:title, :text, :tag_list)
 end
 
 end
