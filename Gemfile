@@ -42,3 +42,5 @@ gem 'acts-as-taggable-on', :git => 'git://github.com/mbleigh/acts-as-taggable-on
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+ruby '2.1.2'
