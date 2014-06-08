@@ -14,12 +14,20 @@
 *= require_self
 */
 ul{
+	
 	margin:0 ;
 	padding:0;
 	width: 1000px;
 	list-style-type: none;
+	text-align: center;
 }
- 
+#nav{
+	text-align: center;
+	margin:0 ;
+	padding:299px;
+	width:700px;
+} 
+
 h1{
 	font-family: 'Atomic Age', cursive;
 	text-align: center;
@@ -28,7 +36,7 @@ h1{
 }
  
 a{
-	text-align: center;
+
 	font-family: 'Open Sans', sans-serif;
 	color:#002a56;
 }
