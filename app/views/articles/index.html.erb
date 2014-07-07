@@ -6,7 +6,7 @@
   <td>
     <tr> <p id="title1"> <%= article.title %></p></tr>
     <tr> <p id="date"> <%= article.created_at.strftime("%B %d, %Y") %></p></tr>
-    <tr> <p> <%= article.text %> <p> </tr>
+    <tr>  <%= raw article.marked_text %></tr>
   </td>
   </table> 
     <p id="tags">Tags: <%= raw article.tag_list.map{|t| link_to t, tag_path(t)}.join(', ') %></p>

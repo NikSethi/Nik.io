@@ -2,7 +2,7 @@
 
 <p id="title"><%= @article.title %></p>
 <p> <%= @article.created_at.strftime("%B %d, %Y") %></p>
-<p><%= @article.text %></p>
+<%= raw @article.marked_text %>
 
 <p id="tags">Tags: <%= raw @article.tag_list.map{|t| link_to t, tag_path(t)}.join(', ') %></p>
 

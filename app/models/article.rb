@@ -4,4 +4,9 @@ class Article < ActiveRecord::Base
 					  length: {minimum: 5}
 	default_scope {order('created_at DESC')}
 	acts_as_taggable
+
+	def marked_text
+		markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true)
+		markdown.render(text)
+	end
 end
