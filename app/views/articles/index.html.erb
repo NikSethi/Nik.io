@@ -1,20 +1,4 @@
-<title>nik.io</title> 
-<h1>nik.io</h1>
-<hr>
- 
-<ul id="nav">
-<li><%= link_to 'Homepage', '/articles/index'  %></li>
-<li><%= link_to 'New Article', new_article_path %></li>
-</ul>
-<ul>
-<div id="tag_cloud">
-  <% tag_cloud Article.tag_counts, %w{s m l} do |tag, css_class| %>
-    <li><%= link_to tag.name, tag_path(tag.name), class: css_class %></li>
-  <% end %>
-</div>
 
-</ul>
-<hr>
  
  
 <table>

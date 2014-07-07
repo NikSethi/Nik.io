@@ -13,20 +13,21 @@
 *= require_tree .
 *= require_self
 */
-ul{
-	
-	margin:0 ;
-	padding:0;
-	width: 1000px;
-	list-style-type: none;
-	text-align: center;
-}
+
 #nav{
-	text-align: center;
-	margin:0 ;
-	padding:299px;
-	width:700px;
+	text-align:center;
+	margin:0 0 0 39%;
 } 
+
+#tag{
+	text-align:center;
+
+}
+
+#tag_cloud{
+
+	text-align:center;
+}
 
 h1{
 	font-family: 'Atomic Age', cursive;
@@ -53,6 +54,7 @@ ul{
 li{
 	list-style: none;
 	display:inline;
+
 }
 
 body{
@@ -98,4 +100,5 @@ p{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	color:#000080 ;
+
 }

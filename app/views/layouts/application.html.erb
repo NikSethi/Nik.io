@@ -8,7 +8,23 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans|Atomic+Age' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<title>nik.io</title> 
+<h1>nik.io</h1>
+<hr>
+ 
+<ul id="nav">
+  <li><%= link_to 'Homepage', '/articles/index'  %></li>
+  <li><%= link_to 'New Article', new_article_path %></li>
+</ul>
+<ul>
+<div id="tag_cloud">
+  <% tag_cloud Article.tag_counts, %w{s m l} do |tag, css_class| %>
+    <li id="tag"><%= link_to tag.name, tag_path(tag.name), class: css_class %></li>
+  <% end %>
+</div>
 
+</ul>
+<hr>
 <%= yield %>
 
 </body>
