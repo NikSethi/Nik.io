@@ -1,7 +1,8 @@
 == README
+Still in progress!
 
 Things to do:
-- Make it reverse chronological
 - Implement an account system (possibly)
 - Allow for replies for comments
-- Add dates
+- Make less ugly
+
